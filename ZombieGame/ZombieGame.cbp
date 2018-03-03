@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ZombieGame" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Script file="lib_finder.script" />
+			<Target title="Release">
+				<Option output="bin/Release/ZombieGame" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../Bengine/include" />
+			<Add directory="../deps/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lglew32s" />
+			<Add library="../Bengine/bin/Release/libBengine.a" />
+			<Add library="mingw32" />
+			<Add library="libSDL2main" />
+			<Add library="libSDL2_ttf" />
+			<Add library="libSDL2_mixer" />
+			<Add library="libSDL2" />
+			<Add library="opengl32" />
+			<Add library="glew32s" />
+			<Add library="glew32" />
+			<Add directory="../deps/lib" />
+		</Linker>
+		<Unit filename="include/Agent.h" />
+		<Unit filename="include/Bullet.h" />
+		<Unit filename="include/Gun.h" />
+		<Unit filename="include/Human.h" />
+		<Unit filename="include/Level.h" />
+		<Unit filename="include/MainGame.h" />
+		<Unit filename="include/Player.h" />
+		<Unit filename="include/Zombie.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Agent.cpp" />
+		<Unit filename="src/Bullet.cpp" />
+		<Unit filename="src/Gun.cpp" />
+		<Unit filename="src/Human.cpp" />
+		<Unit filename="src/Level.cpp" />
+		<Unit filename="src/MainGame.cpp" />
+		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/Zombie.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
